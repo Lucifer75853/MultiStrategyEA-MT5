@@ -156,7 +156,7 @@ bool ValidateSettings()
         return false;
     }
     
-    // Minimim 2 stratégia
+    // Minimum 2 stratégia
     if(Strategy1Name == Strategy2Name)
     {
         Print("⚠️ FIGYELMEZTETÉS: Ugyanaz a stratégia 2x. Javasolt: Mix stratégiák!");
