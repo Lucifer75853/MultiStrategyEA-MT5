@@ -1,0 +1,31 @@
+{
+  "notification": {
+    "enabled": true,
+    "notifications_per_day": 5
+  },
+  "telegram": {
+    "enabled": true,
+    "token": "PASTE_YOUR_TELEGRAM_BOT_TOKEN_HERE",
+    "chat_id": "PASTE_YOUR_CHAT_ID_HERE",
+    "api_url": "https://api.telegram.org/bot"
+  },
+  "whatsapp": {
+    "enabled": false,
+    "provider": "twilio",
+    "account_sid": "PASTE_YOUR_TWILIO_ACCOUNT_SID_HERE",
+    "auth_token": "PASTE_YOUR_TWILIO_AUTH_TOKEN_HERE",
+    "from_number": "whatsapp:+1XXXXXXXXXX",
+    "to_number": "whatsapp:+36XXXXXXXXXX"
+  },
+  "api_limits": {
+    "telegram_rate_limit": 30,
+    "telegram_burst_limit": 100,
+    "request_timeout": 5000,
+    "retry_attempts": 3,
+    "retry_delay_ms": 1000
+  },
+  "security": {
+    "ssl_verify": true,
+    "encrypt_config": false
+  }
+}
