@@ -60,18 +60,18 @@ public:
         
         // Kereskedési beállítások
         Print("║ 📊 KERESKEDÉSI BEÁLLÍTÁSOK");
-        Print("║   Lot Méret: " + DoubleToStr(settings.GetFixedLotSize(), 2));
-        Print("║   Kockázat: " + DoubleToStr(settings.GetRiskPercentage(), 1) + "%");
+        Print("║   Lot Méret: " + DoubleToString(settings.GetFixedLotSize(), 2));
+        Print("║   Kockázat: " + DoubleToString(settings.GetRiskPercentage(), 1) + "%");
         Print("║   Leverage: 1:" + IntegerToString(settings.GetLeverage()));
-        Print("║   Take Profit: " + DoubleToStr(settings.GetTakeProfitPips(), 0) + " pips");
-        Print("║   Stop Loss: " + DoubleToStr(settings.GetStopLossPips(), 0) + " pips");
+        Print("║   Take Profit: " + DoubleToString(settings.GetTakeProfitPips(), 0) + " pips");
+        Print("║   Stop Loss: " + DoubleToString(settings.GetStopLossPips(), 0) + " pips");
         Print("║   Trailing Stop: " + (settings.GetUseTrailingStop() ? "✓ AKTÍV" : "✗ INAKTÍV"));
         
         // Bollinger Bands
         Print("║─────────────────────────────────────────────────");
         Print("║ 📈 BOLLINGER BANDS");
         Print("║   Periódus: " + IntegerToString(settings.GetBBPeriod()));
-        Print("║   Szórás (Std Dev): " + DoubleToStr(settings.GetBBStdDev(), 2));
+        Print("║   Szórás (Std Dev): " + DoubleToString(settings.GetBBStdDev(), 2));
         
         // Pozíció kezelés
         Print("║─────────────────────────────────────────────────");
@@ -80,14 +80,14 @@ public:
         
         double totalProfit = posSync.GetTotalProfit();
         string profitStr = (totalProfit >= 0) ? "✅ +" : "❌ ";
-        Print("║   Teljes P/L: " + profitStr + DoubleToStr(MathAbs(totalProfit), 2) + " USD");
+        Print("║   Teljes P/L: " + profitStr + DoubleToString(MathAbs(totalProfit), 2) + " USD");
         
         // Account Info
         Print("║─────────────────────────────────────────────────");
         Print("║ 💼 ACCOUNT INFORMÁCIÓ");
-        Print("║   Egyenleg: " + DoubleToStr(AccountInfoDouble(ACCOUNT_BALANCE), 2) + " USD");
-        Print("║   Equity: " + DoubleToStr(AccountInfoDouble(ACCOUNT_EQUITY), 2) + " USD");
-        Print("║   Szabad Margó: " + DoubleToStr(AccountInfoDouble(ACCOUNT_FREEMARGIN), 2) + " USD");
+        Print("║   Egyenleg: " + DoubleToString(AccountInfoDouble(ACCOUNT_BALANCE), 2) + " USD");
+        Print("║   Equity: " + DoubleToString(AccountInfoDouble(ACCOUNT_EQUITY), 2) + " USD");
+        Print("║   Szabad Margó: " + DoubleToString(AccountInfoDouble(ACCOUNT_FREEMARGIN), 2) + " USD");
         Print("║   Trading: " + (settings.IsTradingEnabled() ? "✓ ENGEDÉLYEZETT" : "✗ LETILTVA"));
         
         Print("╚════════════════════════════════════════════════╝\n");

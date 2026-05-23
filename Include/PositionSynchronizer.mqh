@@ -135,11 +135,11 @@ public:
             string profitStr = (positions[i].currentProfit >= 0) ? "✅ +" : "❌ ";
             
             Print("║ #" + IntegerToString(positions[i].ticket) + " | " + type);
-            Print("║   Lot: " + DoubleToStr(positions[i].lots, 2));
-            Print("║   Entry: " + DoubleToStr(positions[i].entryPrice, 4));
-            Print("║   SL: " + DoubleToStr(positions[i].stopLoss, 4) + 
-                  " | TP: " + DoubleToStr(positions[i].takeProfit, 4));
-            Print("║   P/L: " + profitStr + DoubleToStr(MathAbs(positions[i].currentProfit), 2) + " USD");
+            Print("║   Lot: " + DoubleToString(positions[i].lots, 2));
+            Print("║   Entry: " + DoubleToString(positions[i].entryPrice, 4));
+            Print("║   SL: " + DoubleToString(positions[i].stopLoss, 4) + 
+                  " | TP: " + DoubleToString(positions[i].takeProfit, 4));
+            Print("║   P/L: " + profitStr + DoubleToString(MathAbs(positions[i].currentProfit), 2) + " USD");
             Print("║───────────────────────────────────────────────────");
         }
         
@@ -183,7 +183,7 @@ public:
             return false;
         }
         
-        Print("✅ Stop Loss módosítva - Új SL: " + DoubleToStr(newSL, 4));
+        Print("✅ Stop Loss módosítva - Új SL: " + DoubleToString(newSL, 4));
         return true;
     }
     
@@ -204,7 +204,7 @@ public:
             return false;
         }
         
-        Print("✅ Take Profit módosítva - Új TP: " + DoubleToStr(newTP, 4));
+        Print("✅ Take Profit módosítva - Új TP: " + DoubleToString(newTP, 4));
         return true;
     }
     

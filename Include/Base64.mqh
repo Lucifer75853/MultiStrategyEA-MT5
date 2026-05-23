@@ -67,13 +67,13 @@ public:
     static bool IsValid(string text)
     {
         int len = StringLen(text);
-        
+
         if(len % 4 != 0)
             return false;
-        
+
         for(int i = 0; i < len; i++)
         {
-            char c = StringGetChar(text, i);
+            ushort c = StringGetCharacter(text, i);
             if(!(
                 (c >= 'A' && c <= 'Z') ||
                 (c >= 'a' && c <= 'z') ||
@@ -82,7 +82,7 @@ public:
             ))
                 return false;
         }
-        
+
         return true;
     }
 };

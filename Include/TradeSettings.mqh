@@ -98,9 +98,9 @@ public:
     {
         if(accountLeverage > maxAccountLeverage)
         {
-            Print("⚠️ FIGYELEM: Leverage túl magas! Max: " + 
-                  IntegerToString(maxAccountLeverage) + ", Aktuális: " + 
-                  DoubleToStr(accountLeverage, 1));
+            Print("FIGYELEM: Leverage túl magas! Max: " +
+                  IntegerToString(maxAccountLeverage) + ", Aktuális: " +
+                  DoubleToString(accountLeverage, 1));
             return false;
         }
         return true;
@@ -184,26 +184,26 @@ public:
         Print("║     KERESKEDÉSI BEÁLLÍTÁSOK            ║");
         Print("╠════════════════════════════════════════╣");
         Print("║ LOT MÉRET");
-        Print("║   Fix Lot: " + DoubleToStr(fixedLotSize, 2));
-        Print("║   Kockázat %: " + DoubleToStr(riskPercentage, 1) + "%");
-        Print("║   Max Pozíció: " + DoubleToStr(maxPositionSize, 2));
+        Print("║   Fix Lot: " + DoubleToString(fixedLotSize, 2));
+        Print("║   Kockázat %: " + DoubleToString(riskPercentage, 1) + "%");
+        Print("║   Max Pozíció: " + DoubleToString(maxPositionSize, 2));
         Print("║─────────────────────────────────────────");
         Print("║ TŐKEÁTTÉTEL");
         Print("║   Leverage: 1:" + IntegerToString(leverage));
         Print("║   Max Leverage: 1:" + IntegerToString((int)maxAccountLeverage));
         Print("║─────────────────────────────────────────");
         Print("║ PROFIT / LOSS");
-        Print("║   Take Profit: " + DoubleToStr(takeProfitPips, 0) + " pips");
-        Print("║   Stop Loss: " + DoubleToStr(stopLossPips, 0) + " pips");
+        Print("║   Take Profit: " + DoubleToString(takeProfitPips, 0) + " pips");
+        Print("║   Stop Loss: " + DoubleToString(stopLossPips, 0) + " pips");
         Print("║   Trailing Stop: " + (useTrailingStop ? "IGEN" : "NEM"));
         Print("║─────────────────────────────────────────");
         Print("║ BOLLINGER BANDS");
         Print("║   Periódus: " + IntegerToString(bbPeriod));
-        Print("║   Szórás (Std Dev): " + DoubleToStr(bbStdDev, 2));
+        Print("║   Szórás (Std Dev): " + DoubleToString(bbStdDev, 2));
         Print("║─────────────────────────────────────────");
         Print("║ KORLÁTOZÁSOK");
         Print("║   Max Nyitott Pozíció: " + IntegerToString(maxOpenTrades));
-        Print("║   Max Napi Veszteség: " + DoubleToStr(maxDailyLossPercent, 1) + "%");
+        Print("║   Max Napi Veszteség: " + DoubleToString(maxDailyLossPercent, 1) + "%");
         Print("║   Trading Engedélyezve: " + (tradingEnabled ? "IGEN ✓" : "NEM ✗"));
         Print("╚════════════════════════════════════════╝\n");
     }
